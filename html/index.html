@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
     <header>
         <div class="container">
             <div class="header-wrapper">
-                <div class="logo"><img src="../assets/images/site-logo.svg" alt="site logo" class="logo" /></div>
+                <div class="logo-wrapper"><img src="images/site-logo.svg" alt="site logo" class="logo" /></div>
                 <div class="nav-wrapper">
                     <nav class="navbar">
                         <ul class="nav-list">
@@ -73,15 +73,14 @@
         <!-- SECTION 3: SLIDER -->
         <section class="slider">
             <div class="container">
-                <div><img src="../assets/images/quote-img.png" alt="quote image" class="slider-quote" /></div>
+                <div><img src="images/quote-img.png" alt="quote image" class="slider-quote" /></div>
                 <div class="slider-container">
                     <!-- flex1 -->
-                    <div class="slider-profile">
-                        <img src="../assets/images/darryl-simsovic.jpg" alt="profile picture"
-                            class="slider-profile-img" />
+                    <div class="slider-profile-container">
+                        <img src="images/darryl-simsovic.jpg" alt="profile picture" class="slider-profile" />
                     </div>
                     <!-- flex2 -->
-                    <div>
+                    <div class="slider-msg-container">
                         <p class="slider-msg">
                             Investing in a franchise system reduces the risk of starting a new business. Having an
                             established
@@ -91,7 +90,7 @@
                             training,
                             leadership and support.
                         </p>
-                        <span >
+                        <span>
                             <span class="slider-name">- Darryl Simsovic</span>
                             <span class="slider-position">CEO, LaunchLife International Inc.</span>
                         </span>
@@ -103,36 +102,40 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-links">
-                <a href="#" title="Goto Home"><img src="../assets/images/logo-white.svg" alt="footer logo image"
-                        class="footer-logo" /></a>
-                <ul class="footer-list">
-                    <li><a href="#" title="Home" >Home</a></li>
-                    <li><a href="#" title="About" >About</a></li>
-                    <li><a href="#" title="Portfolio" >Portfolio</a></li>
-                    <li><a href="#" title="Team" >Team</a></li>
-                    <li><a href="#" title="News" >News</a></li>
-                    <li><a href="#" title="Franchise">Franchise</a></li>
-                    <li><a href="#" title="Opportunities">Opportunities</a></li>
-                    <li><a href="#" title="Careers">Careers</a></li>
-                    <li><a href="#" title="Contact">Contact</a></li>
-                </ul>
+            <div class="footer-top-container">
+                <div class="footer-logo-container"><a href="#" title="Goto Home"><img src="images/logo-white.svg"
+                            alt="footer logo image" class="footer-logo" /></a></div>
+                <div class="footer-list-container">
+                    <ul class="footer-list">
+                        <li><a href="#" title="Home">Home</a></li>
+                        <li><a href="#" title="About">About</a></li>
+                        <li><a href="#" title="Portfolio">Portfolio</a></li>
+                        <li><a href="#" title="Team">Team</a></li>
+                        <li><a href="#" title="News">News</a></li>
+                        <li><a href="#" title="Franchise">Franchise</a></li>
+                        <li><a href="#" title="Opportunities">Opportunities</a></li>
+                        <li><a href="#" title="Careers">Careers</a></li>
+                        <li><a href="#" title="Contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="bottom">
-            <div class="footer-sub-link">
-                <span class="copy-right">©2020 LaunchLife. All rights reserved.</span>
-                <!-- <div class="social-media"> -->
-                <ul class="media-list">
-                    <li><a href="#"><img src="../assets/images/facebook.svg" title="Facebook" alt="Facebook logo"
-                                width="11px" height="22px" /></a></li>
-                    <li><a href="#"><img src="../assets/images/twitter.svg" title="Twitter" alt="Twitter logo"
-                                width="22px" height="17px" /></a></li>
-                    <li><a href="#"><img src="../assets/images/linkedin.svg" title="LinkedIn" alt="Linkedin logo"
-                                width="18px" height="20px" /></a></li>
-                </ul>
-                <!-- </div> -->
-            </div>
-            </div>
+            
+                <div class="footer-sub-link">
+                    <span class="copy-right">©2020 LaunchLife. All rights reserved.</span>
+                    <!-- <div class="social-media"> -->
+                    <div class="media-container">
+                        <ul class="media-list">
+                            <li><a href="#"><img src="images/facebook.svg" title="Facebook" alt="Facebook logo"
+                                        width="11px" height="22px" /></a></li>
+                            <li><a href="#"><img src="images/twitter.svg" title="Twitter" alt="Twitter logo"
+                                        width="22px" height="17px" /></a></li>
+                            <li><a href="#"><img src="images/linkedin.svg" title="LinkedIn" alt="Linkedin logo"
+                                        width="18px" height="20px" /></a></li>
+                        </ul>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            
         </div>
     </footer>
 
