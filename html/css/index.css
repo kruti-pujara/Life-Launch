@@ -23,30 +23,74 @@ header{
     box-shadow: 2px 3.5px 6px 0 rgba(0, 0, 0, 0.1);
     background-color: #FFFFFF;
 }
+.hamburger {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.25s linear;
+    width: 30px;
+    height: 3px;
+    display: none;
+    align-items: center;
+    padding-top: 50px;
+    margin-left: 30px;
+  }
+  .hamburger:hover {
+    opacity: 1;
+  }
+  .hamburger div,
+  .hamburger div:after,
+  .hamburger div:before {
+    background-color: blue;
+    border-radius: 10px;
+    width: 30px;
+    height: 3px;
+    transition: all 0.15s linear;
+  }
+  
+  .hamburger div:before,
+  .hamburger div:after {
+    content: "";
+    position: absolute;
+  }
+  
+  .hamburger div:before {
+    transform: translateY(-200%);
+  }
+  
+  .hamburger div:after {
+    transform: translateY(200%);
+  }
+  
+  .hamburger.open div {
+    background: transparent;
+  }
+  
+  .hamburger.open div:before {
+    transform: rotate(45deg);
+  }
+  
+  .hamburger.open div:after {
+    transform: rotate(-45deg);
+  }
 
 .header-wrapper{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;  
 }
-
 .logo-wrapper{  
     margin-top: 21px;
 }
-
 .logo{
     margin-right:0px;
     width:200px;
     height: 49px;
 }
-
 .nav-list{
     display: flex;
     padding-top: 36px;
-    
     width:766px;
-    margin-left:174px;
-      
+    margin-left:174px;  
 }
 .nav-list li{
     list-style: none;
@@ -281,15 +325,22 @@ header{
     }
 }
 @media (max-width:992px){
-    /*navigation*/  
-
+    /*navigation*/ 
     header{
         height: 88px;
     }
    .nav-list{
-       display: none;
+       position: fixed;
+       left: -100%;
+       top:88px;
+       gap:0;
+       flex-direction: column;
+       width: 100%;
+       text-align: center;
     }
-    
+    .hamburger{
+        display: flex;
+    }
     /* section 1: landing page*/
     .landing-page{
         height: auto;
@@ -392,7 +443,6 @@ header{
         text-align: center;
     }
 }
-
 @media (max-width:768px){
 /* section 1: landing page*/
     .landing-page-message{
@@ -405,7 +455,6 @@ header{
         margin-top: 13px;
     }
 }
-
 @media (max-width:576px){
     /* section 1: landing page*/
     .landing-page-message{
