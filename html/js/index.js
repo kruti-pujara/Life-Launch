@@ -12,8 +12,11 @@ document.querySelectorAll(".nav-link").forEach(n => n.
     navWrapper.classList.remove("active");
 }))
 
-// jQuery('.menu-toggle').click(function(){
-//   jQuery('html,body').toggleClass('open-menu')
-// });
+// $(document).ready(function(){
+//   jQuery('.menu-toggle').click(function(){
+//     jQuery('html,body').toggleClass('open-menu')
+//   });
+// })
+
 
   

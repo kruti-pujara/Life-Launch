@@ -13,6 +13,7 @@ header{
     max-width: 100%;
     box-shadow: 2px 3.5px 6px 0 rgba(0, 0, 0, 0.1);
     background-color: #FFFFFF;
+    height: 88px;
 }
 .site-header{
     position: fixed;
@@ -32,20 +33,20 @@ header{
     flex-wrap: wrap;     
 }
 .logo-wrapper{  
-    margin-right:15px;  
+    margin-left: -15px;  
 }
 .logo{
     width:200px;
-    height: 49px;
+    height:49px;
 }
 .nav-list{
     display: flex;
     flex-wrap:wrap;
+    
 }
 .nav-list li{
     list-style: none;
     padding: 0 15px;
-    
 }
 .nav-list li a{
     text-decoration: none;
@@ -91,8 +92,10 @@ header{
     max-width:860px;
     margin: 0 auto;
     padding: 0 10px;
+    
 }
 .landing-page-message{
+    max-width:839px;
     font-size: 60px;
     font-weight: bold;
     text-align: center;
@@ -123,18 +126,18 @@ header{
     font-weight:bold;
     font-size: 44px;
     line-height: 45px;
-    margin-bottom: 40px;
+    margin-bottom:26px;
     color: #333333;  
 }
 .para-container{
-    margin-bottom: 30px;
+    margin-bottom:60px;
 }
 .about-para{
     font-size: 20px;
     line-height: 28px;
     color:#333333;
     text-align: center;
-    margin-bottom: 36px;
+    margin-bottom:26px;
 }
 .about-portfolio{
     display: flex;
@@ -178,6 +181,7 @@ header{
     max-width: 130px;
     flex-basis: 130px;
     align-items: center;
+    margin-left: -7px; 
 }
 .slider-profile{
     width:130px;
@@ -185,7 +189,7 @@ header{
     border-radius: 50%;
 }
 .quote-container{
-    margin-bottom: 30px;
+    margin-bottom:17px;
 }
 .slider-quote{
     width: 35px;  
@@ -201,11 +205,13 @@ header{
     line-height: 28px;
     font-size: 18px;
     font-weight: normal;
-    color: #333333;    
+    color: #333333;
+    margin-bottom: 10px;    
 }
 .slider-name{
     font-size: 22px;
-    font-weight: 600;    
+    font-weight: 600;
+        
 }
 .slider-position{
     font-weight: normal;
@@ -218,27 +224,31 @@ header{
 /*SECTION 3: FOOTER*/
 .footer{
     background-color: #333333;
-    padding:60px 0 68px;  
+    padding:60px 0 68px;
+    margin-top: -10px;  
 }
 .footer-top{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom:28px;
+}
+.footer-logo-wrapper{
+    margin-left: -12px;
 }
 .footer-logo{
     max-width: 168px;
     height: 41px;
 }
-
 .footer-list{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
+    margin-top: -17px;
+    margin-right: -25px;
 }
 .footer-list li{
     list-style: none;
-    padding: 0 15px;
+    padding: 0 13px;
 }
 .footer-list li a{
     color:#FFFFFF;
@@ -265,6 +275,7 @@ header{
     font-weight: 300;
     line-height: 17px;
     max-width: 255px;
+    margin-left: -13px;
     
 }
 .media-list{
@@ -277,7 +288,7 @@ header{
     height: 41px;
     border: 2px solid #FFFFFF;
     border-radius:50%;
-    margin: 0 15px;
+    margin: 0 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -290,17 +301,17 @@ header{
     .menu-toggle{
         display: block;
     }
-    body.menu-toggle{
-        overflow: hidden;
-    }
+        
     .menu-toggle.active span:nth-child(2){
         opacity: 0;
     }
     .menu-toggle.active span:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(7px) rotate(45deg);
+        transition: 0.5s;
     }
     .menu-toggle.active span:nth-child(3){
-        transform: translateY(-9px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
+        transition: all 0.5s ease-in-out;
     }
     .nav-wrapper{
        position: fixed;
@@ -308,6 +319,7 @@ header{
        top:88px;
        background-color: #FFFFFF;
        width: 100%;
+       height:80vh ;
        overflow-x:hidden;
        overflow: auto;
        transition: 0.5s;  
@@ -406,7 +418,7 @@ header{
         flex-direction: column;
     }
     .footer-logo-wrapper{
-        margin-bottom: 15px;
+        margin-bottom: 25px;
     }
     .footer-list{
        
