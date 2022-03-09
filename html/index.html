@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="open-menu">
 
 <head>
     <meta charset="UTF-8">
@@ -10,79 +10,77 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Home | Launch Life</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body class="open-menu">
     <!-- HEADER -- NAVIGATION -->
-    <header>
-        <div class="container">
+    <header class="site-header">
+        <div class="site-container">
             <div class="header-wrapper">
                 <div class="logo-wrapper"><img src="images/site-logo.svg" alt="site logo" class="logo" /></div>
-                
-                    <nav class="navbar">
-                        <ul class="nav-list">
-                            <li><a href="#" title="About">About</a></li>
-                            <li><a href="#" title="Portfolio">Portfolio</a></li>
-                            <li><a href="#" title="Team">Team</a></li>
-                            <li><a href="#" title="News">News</a></li>
-                            <li><a href="#" title="Farnchies">Franchise</a></li>
-                            <li><a href="#" title="Opportunities">Opportunities</a></li>
-                            <li><a href="#" title="Careers">Careers</a></li>
-                            <li><a href="#" title="Contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <div class="hamburger">
-                        <div></div>
-                    </div>
+                <nav class="nav-wrapper">
+                    <ul class="nav-list">
+                        <li><a href="#" title="About" class="nav-link">About</a></li>
+                        <li><a href="#" title="Portfolio" class="nav-link">Portfolio</a></li>
+                        <li><a href="#" title="Team" class="nav-link">Team</a></li>
+                        <li><a href="#" title="News" class="nav-link">News</a></li>
+                        <li><a href="#" title="Farnchies" class="nav-link">Franchise</a></li>
+                        <li><a href="#" title="Opportunities" class="nav-link">Opportunities</a></li>
+                        <li><a href="#" title="Careers" class="nav-link">Careers</a></li>
+                        <li><a href="#" title="Contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </header>
     <!-- MAIN SECTION -->
     <main>
         <!-- SECTION 1: LANDING PAGE -->
-        <section class="landing-page">
-            <div class="container">
-                <p class="landing-page-message">
+        <section class="home-landing-page">
+            <div class="message-container">
+                <h1 class="landing-page-message">
                     Education is the most powerful
                     weapon which you can use to
                     change the world.
-                </p>
+                </h1>
                 <span class="landing-page-name"> - Nelson Mandela</span>
             </div>
         </section>
         <!-- SECTION 2: ABOUT  -->
-        <section class="about">
-            <div class="container">
+        <section class="home-about">
+            <div class="about-container">
                 <h2 class="about-heading">
                     About LaunchLife
                 </h2>
-
-                <p class="about-para">
-                    LaunchLife International is a global EdTech company with headquarters in
-                    Toronto, Philadelphia, London.
-                </p>
-
-                <p class="about-para">
-                    We champion world-class education platforms and brands.
-                </p>
-
+                <div class="para-container">
+                    <p class="about-para">
+                        LaunchLife International is a global EdTech company with headquarters in
+                        Toronto, Philadelphia, London.</p>
+                    <p class="about-para">
+                        We champion world-class education platforms and brands.</p>
+                </div>
                 <div class="about-portfolio">
                     <a href="#" class="about-link" title="see the companies">See all Portfolio Companies</a>
                 </div>
             </div>
         </section>
         <!-- SECTION 3: SLIDER -->
-        <section class="slider">
-            <div class="container">
-                <div class="slider-container">
-                    <!-- flex1 -->
-                    <div class="slider-profile-container">
-                        <img src="images/darryl-simsovic.jpg" alt="profile picture" class="slider-profile" />
-                    </div>
-                    <!-- flex2 -->
-                    <div class="slider-msg-container">
-                        <div><img src="images/quote-img.png" alt="quote image" class="slider-quote" /></div>
+        <section class="home-slider">
+            <div class="slider-container">
+                <div class="slide">
+                <!-- flex1 -->
+                <div class="slider-profile-container">
+                    <img src="images/darryl-simsovic.jpg" alt="profile picture" class="slider-profile" />
+                </div>
+                <!-- flex2 -->
+                <div class="slider-msg-container">
+                    <div class="quote-container"><img src="images/quote-img.png" alt="quote image" class="slider-quote" /></div>
+                    
                         <p class="slider-msg">
                             Investing in a franchise system reduces the risk of starting a new business. Having an
                             established
@@ -92,22 +90,21 @@
                             training,
                             leadership and support.
                         </p>
-                        <span>
-                            <span class="slider-name">- Darryl Simsovic</span>
-                            <span class="slider-position">CEO, LaunchLife International Inc.</span>
-                        </span>
-                    </div>
+
+                        <span class="slider-name">- Darryl Simsovic</span>
+                        <span class="slider-position">CEO, LaunchLife International Inc.</span>
                 </div>
             </div>
+            </div>
+
         </section>
     </main>
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-top-container">
-                <div class="footer-logo-container"><a href="#" title="Goto Home"><img src="images/logo-white.svg"
-                            alt="footer logo image" class="footer-logo" /></a></div>
-                <div class="footer-list-container">
+        <div class="site-container">
+            <div class="footer-top">
+                <div class="footer-logo-wrapper"><a href="#" title="Goto Home"><img src="images/logo-white.svg"alt="footer logo image" class="footer-logo" /></a></div>
+                <div class="footer-list-wrapper">
                     <ul class="footer-list">
                         <li><a href="#" title="Home">Home</a></li>
                         <li><a href="#" title="About">About</a></li>
@@ -121,10 +118,11 @@
                     </ul>
                 </div>
             </div>
-            
-                <div class="footer-sub-link">
-                    <span class="copy-right">©2020 LaunchLife. All rights reserved.</span>
-                    <!-- <div class="social-media"> -->
+
+
+            <div class="footer-sub-link">
+                <span class="copy-right">©2020 LaunchLife. All rights reserved.</span>
+                <div class="social-media">
                     <div class="media-container">
                         <ul class="media-list">
                             <li><a href="#"><img src="images/facebook.svg" title="Facebook" alt="Facebook logo"
@@ -135,17 +133,14 @@
                                         width="18px" height="20px" /></a></li>
                         </ul>
                     </div>
-                    <!-- </div> -->
                 </div>
-            
+            </div>
         </div>
     </footer>
-
+<!--Script-->
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"> </script>
-    <script  src="js/index.js">
-      
-    </script>
-
+    <script type="text/javascript" src="js/jquery-migrate-3.3.2.min.js"> </script>
+    <script type="text/javascript" src="js/index.js"></script>
     <!-- <script>
             <button className="toggle-btn" onClick={e => document.body.classList.toggle('sidebar-open')}>
                 <span className="burger-item"></span>

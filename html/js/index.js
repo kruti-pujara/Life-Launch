@@ -1,19 +1,19 @@
-(() => {
-    const hamburger = document.getElementById("hamburger");
-    const menu = document.getElementById("overlay");
-    let open = false;
-  
-    const change = () => {
-      if (!open) {
-        hamburger.classList.add("open");
-        menu.classList.add("menu");
-      } else {
-        hamburger.classList.remove("open");
-        menu.classList.remove("menu");
-      }
-      open = !open;
-    };
-  
-    hamburger.addEventListener("click", change);
-  })();
+const menuToggle = document.querySelector(".menu-toggle");
+const navWrapper = document.querySelector(".nav-wrapper");
+
+menuToggle.addEventListener("click",() => {
+  menuToggle.classList.toggle("active");
+  navWrapper.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.
+  addEventListener("click", () => {
+    menuToggle.classList.remove("active");
+    navWrapper.classList.remove("active");
+}))
+
+// jQuery('.menu-toggle').click(function(){
+//   jQuery('html,body').toggleClass('open-menu')
+// });
+
   
