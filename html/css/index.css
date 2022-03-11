@@ -7,6 +7,14 @@ output, p, pre, q, s, samp, section, small, span, strike, strong, sub,
 summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video{ margin: 0; padding: 0; border: 0; vertical-align: baseline }
 
 *, *:after, *:before{ -webkit-box-sizing: border-box; box-sizing: border-box;font-family: 'Hind';}
+
+h2{
+    text-align:center;
+    font-weight:bold;
+    font-size: 44px;
+    line-height: 45px;
+    color: #333333; 
+}
 /* HEADER */
 header{
     padding: 20px 0 19px;
@@ -14,6 +22,7 @@ header{
     box-shadow: 2px 3.5px 6px 0 rgba(0, 0, 0, 0.1);
     background-color: #FFFFFF;
     height: 88px;
+    z-index: 999;
 }
 
 .site-container{  /*for header and footer*/
@@ -28,16 +37,16 @@ header{
     flex-wrap: wrap;     
 }
 .logo-wrapper{  
-    margin-left: -15px;  
+    margin-right:10px;  
 }
 .logo{
-    width:200px;
+    /* width:200px; */
     height:49px;
 }
 .nav-list{
     display: flex;
     flex-wrap:wrap;
-    
+    margin: 0 -15px;
 }
 .nav-list li{
     list-style: none;
@@ -46,18 +55,12 @@ header{
 .nav-list li a{
     text-decoration: none;
     font-size: 18px;
-    font-weight: normal;
     line-height: 24px;
     text-align: left;
     color: #333333;
-    font-stretch: normal;
-    /* border:1px solid transparent */
 }
 .nav-list li a:hover{
-    color:#FFFFFF;
-    background-color:#a7cf3d;
-    border: 1px solid #a7cf3d;
-    border-radius: 5px; 
+   border-bottom: 2px solid #a7cf3d;
 }
 .menu-toggle{
     display: none;
@@ -76,21 +79,14 @@ header{
     
 /* SECTION 1: LANDING PAGE */
 .home-landing-page{
-    background-image: url('../images/home-banner.jpg');
-    background-repeat: no-repeat;
-    max-width: 100%;
-    size: cover;
-    position: center;
-    padding: 257px 0 209px; 
+    padding: 18% 0 18%; 
 }
 .message-container{
     max-width:860px;
     margin: 0 auto;
-    padding: 0 10px;
-    
+    padding: 0 10px;  
 }
 .landing-page-message{
-    max-width:839px;
     font-size: 60px;
     font-weight: bold;
     text-align: center;
@@ -116,45 +112,37 @@ header{
     margin: 0 auto;
     padding: 0 10px;
 }
-.about-heading{
-    text-align:center;
-    font-weight:bold;
-    font-size: 44px;
-    line-height: 45px;
+.about-container h2{
     margin-bottom:26px;
-    color: #333333;  
 }
 .para-container{
     margin-bottom:60px;
 }
-.about-para{
+.para-container p{
     font-size: 20px;
     line-height: 28px;
     color:#333333;
     text-align: center;
     margin-bottom:26px;
 }
-.about-portfolio{
+.green-btn{
     display: flex;
     justify-content: center;
 }
-.about-link{
+.green-btn a{
     color:#FFFFFF;
     background-color: #a7cf3d;
-    padding:0 30px;
     box-shadow: 0 0 10px 0 rgba(167, 207, 61, 0.31);
-    background-color: #a7cf3d;
-    height: 60px;
-    line-height: 60px;
+    text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    transition: all ease .5s;        
+    height: 60px;
+    line-height: 60px;
+    padding: 0 30px;
+          
 }
-.about-link:hover{
+.green-btn a:hover{
     background-color: #86a631;
-
 }
 /*SECTION 3: SLIDER*/
 .home-slider{
@@ -162,9 +150,14 @@ header{
     padding: 76px 0 94px;
 }
 .slider-container{
-    width: 950px;
+    max-width: 950px;
     margin: 0 auto;
     padding: 0 10px;
+}
+.slider-inner{
+  display: flex;
+  padding: 2%;
+
 }
 .slider-profile-container{
     display: flex;
@@ -173,7 +166,7 @@ header{
     max-width: 130px;
     flex-basis: 130px;
     align-items: center;
-    margin-top: 35px;
+    /* margin-top: 35px; */
     margin-left: -7px; 
 }
 .slider-profile{
@@ -188,9 +181,8 @@ header{
     width: 35px;  
 }
 .slider-msg-container{
-    max-width:780px;
     margin-left: 41px;
-    max-width: calc(100%-130px);
+    max-width: 780px;
 }
 .slider-msg{
     text-align: left;
@@ -202,8 +194,7 @@ header{
 }
 .slider-name{
     font-size: 22px;
-    font-weight: 600;
-        
+    font-weight: 600;  
 }
 .slider-position{
     font-weight: normal;
@@ -212,6 +203,7 @@ header{
     letter-spacing: normal;
     font-stretch: normal; 
 }
+/*SLIDER CSS*/
 .slide-arrow{
     position: absolute;
     top:50%;
@@ -236,7 +228,7 @@ header{
     background-repeat: no-repeat;
 }
 /*SECTION 3: FOOTER*/
-.footer{
+.site-footer{
     background-color: #333333;
     padding:60px 0 68px;
     margin-top: -10px;  
@@ -248,7 +240,7 @@ header{
     margin-bottom:28px;
 }
 .footer-logo-wrapper{
-    margin-left: -12px;
+    /* margin-left: -12px; */
 }
 .footer-logo{
     max-width: 168px;
@@ -276,7 +268,7 @@ header{
 .footer-list li a:hover{
     border-bottom: 2px solid white;
 }
-.footer-sub-link{
+.footer-bottom{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -297,6 +289,7 @@ header{
     list-style: none;
     margin: 0 -15px;   
 }
+
 .media-list li a{
     width:41px;
     height: 41px;
@@ -310,8 +303,24 @@ header{
 /*MEDIA QUERIES*/
 @media (max-width:1200px){
 
-    .next-arrow{right: -50px;}
-    .prev-arrow{left: -50px;}
+    /* .next-arrow{right: -50px;}
+    .prev-arrow{left: -50px;} */
+
+    .home-about,.site-footer{padding: 50px 0;}
+
+    .slider-inner{
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+    }
+
+    .prev-arrow{
+        left: -25px;
+    }
+    .next-arrow{
+        right: -25px;
+    }
+    
 }
 @media (max-width:992px){
     /*navigation*/ 
@@ -319,123 +328,102 @@ header{
         position: fixed;
         top:0;
         left:0;
-        width:100%;
-    }
+        width:100%;}
     .menu-toggle{
-        display: block;
-    }
-        
+        display: block;}    
     .menu-toggle.active span:nth-child(2){
-        opacity: 0;
-    }
+        opacity: 0;}
     .menu-toggle.active span:nth-child(1){
         transform: translateY(7px) rotate(45deg);
-        transition: 0.5s;   
-    }
+        transition: 0.5s;   }
     .menu-toggle.active span:nth-child(3){
         transform: translateY(-10px) rotate(-45deg);
-        transition: all 0.5s ease-in-out;
-    }
+        transition: all 0.5s ease-in-out;}
     .nav-wrapper{
        position: fixed;
        left: -100%;
-       top:88px;
+       top:80px;
        background-color: #FFFFFF;
        width: 100%;
        height:80vh ;
        overflow-x:hidden;
        overflow: auto;
-       transition: 0.5s;  
-    } 
+       transition: 0.5s;  } 
     .nav-list{
         gap:0;
         flex-direction: column;
-        text-align: center;
-    }
+        text-align:left;
+        padding-left:16px ;}
     .nav-list li{
-        margin:16px 0;
-    }
+        padding-top:12px;
+        padding-bottom:12px;}
+    .nav-list li:hover{
+        background-color: #bdcf8a;}
+    .nav-list li a:hover{
+        border: none;}
     .nav-wrapper.active{
-        left: 0;
-    }
+        left: 0;}
     /* section 1: landing page*/
    .home-landing-page{
-       padding:50px 0;
-   }
-
-    .landing-page-message{
+       padding:50px 0;}
+   .landing-page-message{
         font-size:45px;
         line-height: 46px;
-        padding-top: 110px;
-        
-    }
-
-    .landing-page-name{
+        padding-top: 110px;}
+   .landing-page-name{
         font-size:27px;
         line-height: 28.5px;
         margin-top: 15px;
-        padding-bottom:80px;
-
-    }
-    /*section 2: about*/
-    .home-about{
-        padding: 10px 0 60px;
-    }
-    .about-heading{
+        padding-bottom:80px;}
+    /*about section*/
+    h2{
         font-size: 33px;
         line-height: 34px;
-        padding-top: 57px;
-    }
-    .about-para{
+        padding-top: 57px;}
+    .para-container p{
         font-size: 18px;
         line-height: 20px;
         padding-top:10px;
-        margin-bottom: 10px;
-    }
-    .about-link{
-        
-        max-width: 290px;
-        margin: 30 auto;
-        height: 60px;
-        font-size: 18px;
-        /* margin-top: 45px;
-        margin-bottom: 80px;
-        padding-top:15px;      */
-    }
+        margin-bottom: 10px;}
+    .green-btn a{
+        padding: 0 25px;
+        font-size: 14px;}
      /*section 3: slider*/
-    .home-slider{
-        padding: 50px 0;
-    }
-    .slider-container{
+  .home-slider{ 
+        padding: 50px 0;}
+  .slider-container{
         text-align: center;
-    }
-    .slide{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
     .slider-msg-container{
         margin: 0 auto;
     }
     .quote-container{
-        text-align: left;
-        margin: 0 0 15px 10px;
+        text-align: center;  
     }
     .slider-msg{
-        text-align: justify;
+        /* max-width: 500px ; */
+        text-align: center;
         font-size: 16px;
     }
     .slider-position{
-        text-align: right;
+        text-align: center;
         margin-left: 10px;
         font-size: 16px;
     }
     .slider-name{
-        text-align: right;
+        text-align: center;
         margin-left: 10px;
         font-size: 20px;
         display: block;
+    } 
+
+    .prev-arrow{
+        left: -15px;
     }
+    .next-arrow{
+        right: -15px;
+    }
+   
     /*footer*/
     .footer-top{
         flex-direction: column;
@@ -448,10 +436,9 @@ header{
         text-align: center; 
         justify-content: center;
         text-align: center;
-        line-height:35px;
-               
+        line-height:35px;        
     }
-    .footer-sub-link{
+    .footer-bottom{
         flex-direction: column;
         text-align: center;
         justify-content: center;
@@ -466,6 +453,7 @@ header{
     }
 }
 @media (max-width:768px){
+
 /* section 1: landing page*/
     .landing-page-message{
         font-size:30px;
@@ -476,6 +464,30 @@ header{
         line-height: 19.5px;
         margin-top: 13px;
     }
+    /*about*/
+    .home-about, .site-footer{
+        padding: 40px 0;}
+
+    /*slider*/
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 1rem 0;
+        list-style-type: none;}     
+    .slick-dots li button {
+                margin: 25px 0 5px;
+                display: block;
+                width: 12px;
+                height: 12px;
+                padding: 0;
+                border: none;
+                border-radius: 100%;
+                background-color: #A7CF3D;
+                }
+    .slick-dots li.slick-active button {
+        background-color: #5FC8DA;}
+    
 }
 @media (max-width:576px){
     /* section 1: landing page*/
@@ -491,9 +503,28 @@ header{
 
     }
     /*section 2: about*/
-    .about-heading{
-        font-size: 22px;
+    h2{
+        font-size: 26px;
         line-height: 23.5px;
-        padding-top: 39px;
     }
+
+    /* .next-arrow{right: -30px;}
+    .prev-arrow{left: -30px;} */
+}
+@media (max-width:375px){
+    .logo-wrapper{margin: 0;}
+    .logo{
+        height:49px;
+        width:120px;
+    }
+
+    .about-container h2{
+        font-size: 18px;
+    }
+
+    .para-container p{
+        font-size: 14px;
+        line-height: 16px;
+    }
+
 }

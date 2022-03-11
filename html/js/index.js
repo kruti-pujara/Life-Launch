@@ -1,6 +1,6 @@
 $(document).ready(function(){
   jQuery('.menu-toggle').click(function(){
-    jQuery('html,body').toggleClass('open-menu')
+    // jQuery('html,body').toggleClass('active')
     jQuery('.nav-wrapper').toggleClass('active')
     jQuery('.menu-toggle').toggleClass('active')
   });
@@ -11,29 +11,32 @@ $(document).ready(function(){
 
   $('.main-slider').slick({
     slidesToShow: 1,
-    slidesToScroll:2,
+    slidesToScroll:1,
     prevArrow:'<button class="slide-arrow prev-arrow"></button>',
     nextArrow:'<button class="slide-arrow next-arrow"></button>',
-    variableWidth:true,
     responsive: [
       {
         breakpoint: 1200,
         settings: {
           slidesToShow:1,
-          slidesToScroll:2,
+          slidesToScrol:1,
         }
       },
       {
         breakpoint: 992,
         settings: {
           slidesToShow:1,
+          slidesToScrol:1,
         }
       },
       {
         breakpoint: 768,
         settings: {
+          arrows:false,
+          dots:true,
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScrol:1,
+          
         }
       }
       // You can unslick at a given breakpoint now by adding:
