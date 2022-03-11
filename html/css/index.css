@@ -15,12 +15,7 @@ header{
     background-color: #FFFFFF;
     height: 88px;
 }
-.site-header{
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-}
+
 .site-container{  /*for header and footer*/
     max-width: 1140px;
     padding: 0 15px;
@@ -146,11 +141,11 @@ header{
 .about-link{
     color:#FFFFFF;
     background-color: #a7cf3d;
-    padding-top:15px;
+    padding:0 30px;
     box-shadow: 0 0 10px 0 rgba(167, 207, 61, 0.31);
     background-color: #a7cf3d;
-    width: 304px;
     height: 60px;
+    line-height: 60px;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -167,12 +162,9 @@ header{
     padding: 76px 0 94px;
 }
 .slider-container{
-    max-width: 950px;
+    width: 950px;
     margin: 0 auto;
     padding: 0 10px;
-}
-.slide{
-    display: flex;
 }
 .slider-profile-container{
     display: flex;
@@ -181,6 +173,7 @@ header{
     max-width: 130px;
     flex-basis: 130px;
     align-items: center;
+    margin-top: 35px;
     margin-left: -7px; 
 }
 .slider-profile{
@@ -199,7 +192,6 @@ header{
     margin-left: 41px;
     max-width: calc(100%-130px);
 }
-
 .slider-msg{
     text-align: left;
     line-height: 28px;
@@ -218,8 +210,30 @@ header{
     font-size: 16px;
     display: block;
     letter-spacing: normal;
-    font-stretch: normal;
-    
+    font-stretch: normal; 
+}
+.slide-arrow{
+    position: absolute;
+    top:50%;
+    margin-top: -15px;
+}
+.prev-arrow{
+    left: -114px;
+    background-image: url('../images/backward.png');
+    width: 20px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+}
+.next-arrow{
+    right: -114px;
+    background-image: url('../images/forward.png');
+    width: 20px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
 }
 /*SECTION 3: FOOTER*/
 .footer{
@@ -295,9 +309,18 @@ header{
 }
 /*MEDIA QUERIES*/
 @media (max-width:1200px){
+
+    .next-arrow{right: -50px;}
+    .prev-arrow{left: -50px;}
 }
 @media (max-width:992px){
     /*navigation*/ 
+    .site-header{
+        position: fixed;
+        top:0;
+        left:0;
+        width:100%;
+    }
     .menu-toggle{
         display: block;
     }
@@ -307,7 +330,7 @@ header{
     }
     .menu-toggle.active span:nth-child(1){
         transform: translateY(7px) rotate(45deg);
-        transition: 0.5s;
+        transition: 0.5s;   
     }
     .menu-toggle.active span:nth-child(3){
         transform: translateY(-10px) rotate(-45deg);
