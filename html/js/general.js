@@ -1,6 +1,6 @@
 $(document).ready(function(){
   jQuery('.menu-toggle').click(function(){
-    // jQuery('html,body').toggleClass('active')
+    jQuery('html,body').toggleClass('active')
     jQuery('.nav-wrapper').toggleClass('active')
     jQuery('.menu-toggle').toggleClass('active')
   });

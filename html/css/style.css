@@ -7,7 +7,9 @@ output, p, pre, q, s, samp, section, small, span, strike, strong, sub,
 summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video{ margin: 0; padding: 0; border: 0; vertical-align: baseline }
 
 *, *:after, *:before{ -webkit-box-sizing: border-box; box-sizing: border-box;font-family: 'Hind';}
-
+body.active{
+    overflow: hidden;
+}
 h2{
     text-align:center;
     font-weight:bold;
@@ -16,17 +18,16 @@ h2{
     color: #333333; 
 }
 /* HEADER */
-header{
-    padding: 20px 0 19px;
-    max-width: 100%;
+.site-header{
+    padding: 21px 0;
+    position: fixed;
+    width: 100%;
     box-shadow: 2px 3.5px 6px 0 rgba(0, 0, 0, 0.1);
     background-color: #FFFFFF;
-    height: 88px;
     z-index: 999;
 }
-
 .site-container{  /*for header and footer*/
-    max-width: 1140px;
+    max-width: 1170px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -37,30 +38,46 @@ header{
     flex-wrap: wrap;     
 }
 .logo-wrapper{  
-    margin-right:10px;  
-}
-.logo{
-    /* width:200px; */
     height:49px;
+    width: auto;
 }
-.nav-list{
+.logo-wrapper img{
+   width: 100%;
+   height: 100%;
+}
+.nav-wrapper ul{
     display: flex;
     flex-wrap:wrap;
     margin: 0 -15px;
 }
-.nav-list li{
+.nav-wrapper ul li{
     list-style: none;
-    padding: 0 15px;
+    padding: 0 19px;
 }
-.nav-list li a{
+.nav-wrapper ul li a{
     text-decoration: none;
     font-size: 18px;
     line-height: 24px;
     text-align: left;
     color: #333333;
+    position: relative;
 }
-.nav-list li a:hover{
-   border-bottom: 2px solid #a7cf3d;
+.nav-wrapper ul li a:hover::before, .nav-wrapper ul li a:focus::before{
+    width: 100%;
+}
+.nav-wrapper ul li a::before{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #A7CF3D;
+    transition: all 0.5s;
+}
+.nav-wrapper ul li a:hover, .nav-wrapper ul li a:focus{
+    color: #A7CF3D;
+    transition: 0.5s    ;
 }
 .menu-toggle{
     display: none;
@@ -75,22 +92,34 @@ header{
     position: relative;
     background: #000;
     border-radius: 3px;
+    transition: all 0.5s;
+    cursor: pointer;
 }
     
 /* SECTION 1: LANDING PAGE */
-.home-landing-page{
-    padding: 18% 0 18%; 
+.bg-img{
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
 }
-.message-container{
-    max-width:860px;
-    margin: 0 auto;
-    padding: 0 10px;  
+.site-main{
+    padding-top: 90px;
+}
+.home-landing-page{
+    padding: 13% 0 11%; 
+}
+.home-landing-page .site-container{
+    padding: 0 150px;
+}
+.home-landing-page .site-container .content-block{
+    min-height: 129px;
 }
 .landing-page-message{
     font-size: 60px;
     font-weight: bold;
     text-align: center;
-    line-height: 64px;
+    line-height: 1.06;
     margin-bottom: 17px;
     color:#FFFFFF;
     text-shadow: 0 0 20px rgba(0,0,0,0.5);
@@ -107,84 +136,78 @@ header{
 .home-about{
     padding: 77px 0 80px;
 }
-.about-container{
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 10px;
+.home-about .site-container{
+    padding: 0 256px;
 }
-.about-container h2{
+.content-block{
+    text-align: center;
+}
+.content-block h2{
     margin-bottom:26px;
 }
-.para-container{
-    margin-bottom:60px;
+.content-block .para-container{
+    margin-bottom: 26px;
 }
-.para-container p{
+.content-block .para-container p{
     font-size: 20px;
-    line-height: 28px;
+    line-height: 1.4;
     color:#333333;
     text-align: center;
-    margin-bottom:26px;
 }
 .green-btn{
-    display: flex;
-    justify-content: center;
-}
-.green-btn a{
-    color:#FFFFFF;
-    background-color: #a7cf3d;
-    box-shadow: 0 0 10px 0 rgba(167, 207, 61, 0.31);
+    display: inline-block;
+    margin-top: 40px;
     text-decoration: none;
+
+    font-family: "Hind";
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 700px;
+    color: #fff;
+    background-color: #A7CF3D;
+
     height: 60px;
     line-height: 60px;
     padding: 0 30px;
-          
-}
-.green-btn a:hover{
-    background-color: #86a631;
+
 }
 /*SECTION 3: SLIDER*/
 .home-slider{
     background-color: #E1E1E1;
-    padding: 76px 0 94px;
+    padding: 76px 0 98px;
 }
-.slider-container{
-    max-width: 950px;
-    margin: 0 auto;
-    padding: 0 10px;
+.home-slider .site-container{
+    padding: 0 99px;
 }
 .slider-inner{
   display: flex;
-  padding: 2%;
-
+  padding: 0 10px;
+  align-items: center;
 }
 .slider-profile-container{
-    display: flex;
     flex-grow: 0;
     flex-shrink: 0;
     max-width: 130px;
     flex-basis: 130px;
     align-items: center;
     /* margin-top: 35px; */
-    margin-left: -7px; 
+    margin-left:5px; 
 }
-.slider-profile{
+.slider-profile-container img{
     width:130px;
     height: 130px;
     border-radius: 50%;
 }
 .quote-container{
-    margin-bottom:17px;
+    margin-bottom:20px;
 }
-.slider-quote{
+.quote-container img{
     width: 35px;  
 }
 .slider-msg-container{
     margin-left: 41px;
     max-width: 780px;
 }
-.slider-msg{
+.slider-msg-container .para-container p{
     text-align: left;
     line-height: 28px;
     font-size: 18px;
@@ -230,7 +253,7 @@ header{
 /*SECTION 3: FOOTER*/
 .site-footer{
     background-color: #333333;
-    padding:60px 0 68px;
+    padding:58px 0 68px;
     margin-top: -10px;  
 }
 .footer-top{
@@ -240,33 +263,36 @@ header{
     margin-bottom:28px;
 }
 .footer-logo-wrapper{
-    /* margin-left: -12px; */
+    height: auto;
+    width: 168px;
 }
-.footer-logo{
-    max-width: 168px;
-    height: 41px;
+.footer-logo-wrapper a{
+    display: inline-block;
 }
-.footer-list{
+.footer-logo-wrapper img{
+    width: 100%;
+    height: 100%;
+}
+.footer-list-wrapper ul{
     display: flex;
     flex-wrap: wrap;
-    margin-top: -17px;
-    margin-right: -25px;
+    justify-content: center;
+    align-items: center;
 }
-.footer-list li{
+.footer-list-wrapper ul li{
     list-style: none;
     padding: 0 13px;
 }
-.footer-list li a{
+.footer-list-wrapper ul li a{
     color:#FFFFFF;
     font-size: 16px;
     line-height: 24px;
     text-align: right;
     font-weight: 300;
     text-decoration: none;
-    padding-top: 10px;
 }
-.footer-list li a:hover{
-    border-bottom: 2px solid white;
+.footer-list-wrapper ul li a:hover, .footer-list-wrapper ul li a:focus{
+    color: #c2c1c1;
 }
 .footer-bottom{
     display: flex;
@@ -281,109 +307,109 @@ header{
     font-weight: 300;
     line-height: 17px;
     max-width: 255px;
-    margin-left: -13px;
+    /* margin-left: -13px; */
     
 }
 .media-list{
     display: flex;
     list-style: none;
-    margin: 0 -15px;   
+    /* margin: 0 -15px;    */
 }
-
 .media-list li a{
     width:41px;
     height: 41px;
-    border: 2px solid #FFFFFF;
+    line-height: 41px;
+    border: 1px solid #FFFFFF;
     border-radius:50%;
     margin: 0 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    text-align: center;
 }
+.media-list li a svg{
+    vertical-align: middle;
+    opacity:0.5;
+    fill: #fff;
+}
+.media-list li a:hover{
+background: #fff;
+opacity: 0.5;}
+.media-list li a:hover svg{
+    fill: #333;
+    opacity: 1;
+}
+
 /*MEDIA QUERIES*/
-@media (max-width:1200px){
-
-    /* .next-arrow{right: -50px;}
-    .prev-arrow{left: -50px;} */
-
-    .home-about,.site-footer{padding: 50px 0;}
-
+@media (max-width:1199px){
+    .home-landing-page, .home-about, .home-slider, .site-footer{
+        padding: 45px 0;
+    }
     .slider-inner{
      flex-direction: column;
      justify-content: center;
      align-items: center;
     }
-
     .prev-arrow{
         left: -25px;
     }
     .next-arrow{
         right: -25px;
     }
-    
 }
-@media (max-width:992px){
+@media (max-width:991px){
+/*General settings------------------*/
+.site-container, .home-landing-page .site-container, .home-about .site-container, .home-slider .site-container{
+    padding: 0 15px;
+}
     /*navigation*/ 
-    .site-header{
-        position: fixed;
-        top:0;
-        left:0;
-        width:100%;}
     .menu-toggle{
         display: block;}    
     .menu-toggle.active span:nth-child(2){
         opacity: 0;}
     .menu-toggle.active span:nth-child(1){
         transform: translateY(7px) rotate(45deg);
-        transition: 0.5s;   }
+    }
     .menu-toggle.active span:nth-child(3){
         transform: translateY(-10px) rotate(-45deg);
-        transition: all 0.5s ease-in-out;}
+    }   
     .nav-wrapper{
        position: fixed;
        left: -100%;
        top:80px;
        background-color: #FFFFFF;
        width: 100%;
-       height:80vh ;
+       height:calc(100% - 80px) ;
+       overflow:auto;
        overflow-x:hidden;
-       overflow: auto;
        transition: 0.5s;  } 
-    .nav-list{
+
+       .nav-wrapper.active{
+        left: 0;}
+    .nav-wrapper ul{
         gap:0;
         flex-direction: column;
         text-align:left;
         padding-left:16px ;}
-    .nav-list li{
+    .nav-wrapper ul li{
         padding-top:12px;
         padding-bottom:12px;}
-    .nav-list li:hover{
-        background-color: #bdcf8a;}
-    .nav-list li a:hover{
+    .nav-wrapper ul li:hover, .nav-wrapper ul li:focus{
+        background-color:none;}
+    .nav-wrapper ul li:hover, .nav-wrapper ul li:focus{
         border: none;}
-    .nav-wrapper.active{
-        left: 0;}
+    
     /* section 1: landing page*/
-   .home-landing-page{
-       padding:50px 0;}
+
    .landing-page-message{
-        font-size:45px;
-        line-height: 46px;
-        padding-top: 110px;}
+        font-size:45px;}
    .landing-page-name{
         font-size:27px;
-        line-height: 28.5px;
-        margin-top: 15px;
-        padding-bottom:80px;}
+       }
     /*about section*/
     h2{
         font-size: 33px;
-        line-height: 34px;
-        padding-top: 57px;}
+        }
     .para-container p{
         font-size: 18px;
-        line-height: 20px;
-        padding-top:10px;
         margin-bottom: 10px;}
     .green-btn a{
         padding: 0 25px;
@@ -396,6 +422,9 @@ header{
     }
     .slider-msg-container{
         margin: 0 auto;
+    }
+    .slider-inner{
+        padding: 0 ;
     }
     .quote-container{
         text-align: center;  
@@ -416,7 +445,6 @@ header{
         font-size: 20px;
         display: block;
     } 
-
     .prev-arrow{
         left: -15px;
     }
@@ -432,7 +460,6 @@ header{
         margin-bottom: 25px;
     }
     .footer-list{
-       
         text-align: center; 
         justify-content: center;
         text-align: center;
@@ -452,22 +479,17 @@ header{
         text-align: center;
     }
 }
-@media (max-width:768px){
-
+@media (max-width:767px){
+.home-landing-page, .home-about, .home-slider, .site-footer{
+        padding: 25px 0;
+    }
 /* section 1: landing page*/
     .landing-page-message{
         font-size:30px;
-        line-height: 31px;
-    }
+     }
     .landing-page-name{
         font-size:18px;
-        line-height: 19.5px;
-        margin-top: 13px;
     }
-    /*about*/
-    .home-about, .site-footer{
-        padding: 40px 0;}
-
     /*slider*/
     .slick-dots {
         display: flex;
@@ -484,47 +506,37 @@ header{
                 border: none;
                 border-radius: 100%;
                 background-color: #A7CF3D;
-                }
+    }
     .slick-dots li.slick-active button {
         background-color: #5FC8DA;}
-    
+    .next-arrow, .prev-arrow{display: none;}
 }
-@media (max-width:576px){
+@media (max-width:575px){
     /* section 1: landing page*/
     .landing-page-message{
         font-size:22px;
         line-height:23px;
     }
-
     .landing-page-name{
         font-size:18px;
         line-height: 19.5px;
         margin-top:10px;
-
     }
-    /*section 2: about*/
     h2{
         font-size: 26px;
         line-height: 23.5px;
     }
-
-    /* .next-arrow{right: -30px;}
-    .prev-arrow{left: -30px;} */
-}
-@media (max-width:375px){
-    .logo-wrapper{margin: 0;}
-    .logo{
-        height:49px;
-        width:120px;
+    .content-block .para-container{
+        margin-bottom: 15px;
     }
-
-    .about-container h2{
-        font-size: 18px;
+    .content-block .para-container p, .slider-msg-container .para-container p{
+        font-size: 16px;
     }
-
-    .para-container p{
-        font-size: 14px;
-        line-height: 16px;
+    .green-btn{
+        margin-top: 15px;
+        font-size: 16px;
+        padding: 0 15px;
     }
 
 }
+
